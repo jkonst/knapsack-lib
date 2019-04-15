@@ -1,5 +1,7 @@
 package com.mobiquityinc.services;
 
+import com.mobiquityinc.exception.APIException;
+
 public class KnapsackCalculator implements ItemCalculator {
 
     private Double maxWeight;
@@ -7,7 +9,7 @@ public class KnapsackCalculator implements ItemCalculator {
     private Double[] values;
 
     @Override
-    public String getItems() {
+    public String getItems() throws APIException {
         //TODO
         return null;
     }
