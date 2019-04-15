@@ -66,14 +66,11 @@ public class ParserTest {
 
         Assertions.assertThrows(APIException.class, () -> parser.parse(path));
 
-
     }
 
     @Test
     public void parseValidFileAfterMock() throws APIException {
         KnapsackParser parser = new KnapsackParser();
-        //String path = KnapsackParser.class.getResource(validFileName).getPath();
-        ClassLoader classLoader = getClass().getClassLoader();
         File testFile = new File("src/test/resources" + validFileName);
         parser.parse(testFile.getAbsolutePath());
         Assertions.assertEquals(parser.getMaxWeights().size(), parser.getValues().size());
@@ -81,10 +78,15 @@ public class ParserTest {
     }
 
 
-
     @Test
     public void parseInvalidFileAfterMock() throws APIException {
+        KnapsackParser parser = new KnapsackParser();
+        File testFile = new File("src/test/resources" + invalidFileName);
 
+        Assertions.assertThrows(APIException.class, () -> parser.parse(testFile.getAbsolutePath()));
+        Assertions.assertEquals(parser.getMaxWeights().size(), 0);
+        Assertions.assertEquals(parser.getValues().size(), 0);
+        Assertions.assertEquals(parser.getWeights().size(), 0);
     }
 
 }
