@@ -8,8 +8,8 @@ public static String pack(String filePath) throws APIException {
     GenericPacker packer = null;
     PackerInjector injector = new KnapsackInjector();
 
-    packer = injector.getPacker(); //Dependency injection
-    
+    packer = injector.getPacker(); //Dependency injection in order to instantiate PackerOrchestrator with the desired dependencies
+
     return packer.pack(filePath);
 }
 

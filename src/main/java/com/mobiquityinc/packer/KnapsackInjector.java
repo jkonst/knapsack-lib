@@ -1,7 +1,7 @@
 package com.mobiquityinc.packer;
 
-import com.mobiquityinc.utils.KnapsackCalculator;
-import com.mobiquityinc.utils.KnapsackParser;
+import com.mobiquityinc.services.KnapsackCalculator;
+import com.mobiquityinc.services.KnapsackParser;
 
 public class KnapsackInjector implements PackerInjector {
 
