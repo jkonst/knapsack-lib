@@ -1,4 +1,4 @@
-package com.mobiquityinc.utils;
+package com.mobiquityinc.services;
 
 import com.mobiquityinc.exception.APIException;
 
