@@ -1,4 +1,4 @@
-package com.mobiquityinc.utils;
+package com.mobiquityinc.services;
 
 public class KnapsackCalculator implements ItemCalculator {
 
