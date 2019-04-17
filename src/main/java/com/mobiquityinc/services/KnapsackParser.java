@@ -33,7 +33,7 @@ public class KnapsackParser implements FileParser {
             for (String line : lines) {
                 String weightStr = line.substring(0, line.indexOf(":")).trim();
                 Double weight = weightStr.contains(".") ? Double.parseDouble(weightStr) : new Double(Integer.parseInt(weightStr));
-                if (weight > 100.0) // constraint for max weight of package
+                if (weight > 100) // constraint for max weight of package
                     throw new APIException("Max weight of package exceeds max limit of 100");
                 maxWeights.add(weight);
                 parsePairs(line.substring(line.indexOf(":") + 1).trim());

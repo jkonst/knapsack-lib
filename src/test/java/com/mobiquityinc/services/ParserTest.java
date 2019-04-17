@@ -26,7 +26,7 @@ public class ParserTest {
     public static void beforeAllTests() {
         validFileName = "/knapsack.txt";
         invalidFileName = "/knapsackINV.txt";
-        maxWeights = Arrays.asList(new Double(81), new Double(8), new Double(75), new Double(56));
+        maxWeights = Arrays.asList(81.0, 8.0, 75.0, 56.0);
         values = Arrays.asList(new Double[]{new Double(45), new Double(98), new Double(3), new Double(76), new Double(9), new Double(48)},
                 new Double[]{new Double(34)},
                 new Double[]{new Double(29), new Double(74), new Double(16), new Double(55), new Double(52),

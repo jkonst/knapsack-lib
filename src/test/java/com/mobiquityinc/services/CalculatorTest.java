@@ -19,6 +19,9 @@ public class CalculatorTest {
         maxWeight = 75.0;
         values = new Double[]{29.0, 74.0, 16.0, 55.0, 52.0, 75.0, 74.0, 35.0, 78.0};
         weights = new Double[]{85.31, 14.55, 3.98, 26.24, 63.69, 76.25, 60.02, 93.18, 89.95};
+//        maxWeight = 81.0;
+//        values = new Double[]{45.0, 98.0, 3.0, 76.0, 9.0, 48.0};
+//        weights = new Double[]{53.38, 88.62, 78.48, 72.3, 30.18, 46.34};
     }
 
     @Test
@@ -55,12 +58,13 @@ public class CalculatorTest {
 
     @Test
     public void getCorrectlyCalculatedItems() throws APIException {
-        //TODO
-    }
+        KnapsackCalculator calculator = new KnapsackCalculator();
 
-    @Test
-    public void getIncorrectlyCalculatedItems() throws APIException {
-        //TODO
+        calculator.setMaxWeight(maxWeight);
+        calculator.setValues(values);
+        calculator.setWeights(weights);
+
+        Assertions.assertEquals("2,7", calculator.getItems());
     }
 
     private void calculatorSetup(KnapsackCalculator calculator) {
